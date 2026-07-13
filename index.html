@@ -249,6 +249,22 @@
   }
 
   a:focus-visible, .cta-btn:focus-visible{outline:2px solid var(--coral-deep); outline-offset:3px;}
+
+  @supports (text-wrap: balance){
+    h1, h2, .whisper .line, .conf-card p.quote, .case .before, .case .after{
+      text-wrap: balance;
+    }
+  }
+  wbr{line-height:0;}
+
+  @media (max-width:480px){
+    .wrap{padding:0 22px;}
+    .whisper .line{padding-left:14px; font-size:17px;}
+    .whisper .line::before{font-size:28px; left:-2px; top:-6px;}
+    .whisper .line.soft{font-size:14.5px;}
+    .conf-card{padding:36px 24px;}
+    .case .before, .case .after{padding:16px 18px; font-size:14px;}
+  }
 </style>
 </head>
 <body>
@@ -273,13 +289,13 @@
 <section class="whisper">
   <div class="wrap">
     <p class="line soft reveal" style="margin-bottom:6px;">気づけば、勝ち負けを競っている。</p>
-    <p class="line reveal">「なんで私から謝らないといけないの」</p>
+    <p class="line reveal">「なんで私から<wbr>謝らないと<wbr>いけないの」</p>
 
     <p class="line soft reveal d1" style="margin-bottom:6px; margin-top:34px;">気づけば、誰かのせいにしている。</p>
-    <p class="line reveal d1">「そんなふうにしたのは、あなたじゃん」</p>
+    <p class="line reveal d1">「そんなふうにしたのは、<wbr>あなたじゃん」</p>
 
     <p class="line soft reveal d2" style="margin-bottom:6px; margin-top:34px;">頑張り方さえ、もうわからない。</p>
-    <p class="line reveal d2">「どうせ、また言い返してくるし」</p>
+    <p class="line reveal d2">「どうせ、また<wbr>言い返してくるし」</p>
 
     <p class="line soft reveal d3" style="margin-top:34px;">頭では分かっているんです。<br>意地を張っても、何も変わらないって。<br>でも、腑に落とせない。</p>
   </div>
@@ -299,7 +315,7 @@
         <circle cx="50" cy="50" r="46" fill="url(#avatarGrad)" opacity="0.85"/>
       </svg>
       <h2>私も、同じでした。</h2>
-      <p class="quote">「せっかく優しくしたのに、冷たい態度取るならもういいや」</p>
+      <p class="quote">「せっかく優しくしたのに、<wbr>冷たい態度取るなら<wbr>もういいや」</p>
       <p>今日こそ優しくしようと思っても、相手の顔を見た瞬間、いつもの態度に戻ってしまう自分がいました。</p>
       <p>「相手がどうか」ではなく「自分がどうしたいか」にフォーカスできるようになってから、機嫌よくいられる時間が少しずつ増えていきました。</p>
       <p>今度は私が、そのお手伝いをする番だと思っています。一人で抱え込んでいる本音を、一緒に一歩ずつ、言葉にしていきましょう。</p>
@@ -433,14 +449,13 @@
   <div class="wrap">
     <h2 class="reveal">一人で抱えている本音を、<br>一緒に言葉にしませんか。</h2>
     <p class="reveal d1">今月限定10名様。気になる方は、下のボタンからお申し込みください。</p>
-    <a class="cta-btn reveal d2" href="#">申し込みフォームへ進む</a>
-    <div class="note reveal d3">※ボタンのリンク先は申込みフォームのURLに差し替えてください</div>
+    <a class="cta-btn reveal d2" href="https://docs.google.com/forms/d/e/1FAIpQLScgRvGJb6-pTtvsLYp6vp5O1uS3uavxVJHWF7OBb88dYMg3AA/viewform?usp=sharing&ouid=102351399093548251412" target="_blank" rel="noopener">申し込みフォームへ進む</a>
   </div>
 </section>
 
 <div class="sticky-cta" id="stickyCta">
   <span>今月限定10名様</span>
-  <a href="#apply">申し込む</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScgRvGJb6-pTtvsLYp6vp5O1uS3uavxVJHWF7OBb88dYMg3AA/viewform?usp=sharing&ouid=102351399093548251412" target="_blank" rel="noopener">申し込む</a>
 </div>
 
 <script>
